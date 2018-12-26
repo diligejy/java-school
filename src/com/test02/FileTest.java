@@ -13,5 +13,7 @@ public class FileTest {
 		while((str = br.readLine()) != null) {
 			System.out.println(str);
 		}
+		br.close();
+		fr.close();
 	}
 }
