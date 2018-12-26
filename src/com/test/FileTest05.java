@@ -7,9 +7,9 @@ public class FileTest05 {
 		File fi = new File("C:\\MyTest");
 		View(fi);
 	}
-
+	public static int cnt = 0;
 	public static void View(File fi) {
-		int cnt = 0;
+		
 		System.out.println(cnt++ + "<========> " + fi.getName());
 		if (fi.exists()) {
 			for (File str : fi.listFiles()) {
