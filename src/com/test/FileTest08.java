@@ -5,7 +5,7 @@ import java.io.*;
 public class FileTest08 {
 	public static void main(String[] args) throws IOException {
 		// Stream (byte) read() write() = String X
-		// char Read() = String X
+		// char Read() = String X2
 		// 대상을 파일에서 읽어서 파일로 쓰곘다
 		File f = new File("parkboyoung.jpg");
 		FileInputStream fi = new FileInputStream(f);
