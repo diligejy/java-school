@@ -15,6 +15,22 @@ public class FileTest02 {
 		}
 	}
 
+	public static void My_Write02(File fi) {
+		try (FileOutputStream fos = new FileOutputStream(fi)) {
+			for (int i = 65; i <= 90; i++) {
+				try {
+					fos.write(i);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+
 	public static void My_Write(File fi) throws IOException {
 		FileOutputStream fos = null;
 		try {
