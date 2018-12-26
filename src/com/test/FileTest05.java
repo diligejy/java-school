@@ -7,9 +7,14 @@ public class FileTest05 {
 		File fi = new File("C:\\MyTest");
 		View(fi);
 	}
+
 	public static void View(File fi) {
-		for (String str : fi.list()) {
-			System.out.println(str);
-		}
+		if (fi.exists()) {
+			for (File str : fi.listFiles()) {
+				View(str);
+				System.out.println(str);
+			}
+		}else
+			return;
 	}
 }
