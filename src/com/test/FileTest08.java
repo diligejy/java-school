@@ -7,11 +7,11 @@ public class FileTest08 {
 		// Stream (byte) read() write() = String X
 		// char Read() = String X
 		// 대상을 파일에서 읽어서 파일로 쓰곘다
-		File f = new File("b.txt");
+		File f = new File("parkboyoung.jpg");
 		FileInputStream fi = new FileInputStream(f);
 		BufferedInputStream bi = new BufferedInputStream(fi);
 		
-		File res = new File("res.txt");
+		File res = new File("pby.jpg");
 		FileOutputStream fo = new FileOutputStream(res);
 		BufferedOutputStream bfo = new BufferedOutputStream(fo);
 		int ch = 0;
