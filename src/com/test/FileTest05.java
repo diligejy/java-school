@@ -9,6 +9,8 @@ public class FileTest05 {
 	}
 
 	public static void View(File fi) {
+		int cnt = 0;
+		System.out.println(cnt++ + "<========> " + fi.getName());
 		if (fi.exists()) {
 			for (File str : fi.listFiles()) {
 				View(str);
