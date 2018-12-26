@@ -56,16 +56,15 @@ public class FileTest02 {
 	}
 
 	public static void My_Read(File fi) throws IOException {
-		FileInputStream fr = new FileInputStream(fi);
-		// 한글자씩 읽어서 리턴하자 글자 없으면 -1을 리턴한다
+		try (FileInputStream fr = new FileInputStream(fi)) {
+			int ch = 0;
+			while ((ch = fr.read()) != -1) {
+				System.out.println((char) ch);
 
-		int ch = 0;
-
-		// 한글자씩 -1이 아닐때까지 읽어서 리턴하자
-
-		while ((ch = fr.read()) != -1) {
-			System.out.println((char) ch);
+			} // while
+		} catch (Exception e) {
+			
 		}
-		fr.close();
+
 	}
 }
