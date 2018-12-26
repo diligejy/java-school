@@ -16,9 +16,10 @@ public class FileTest07 {
 	}
 
 	public static void My_Write(File fi) throws IOException {
-		FileOutputStream fos = new FileOutputStream(fi); //throws FileOutputStream
+		FileOutputStream fos = new FileOutputStream(fi, true); //throws FileOutputStream
 		for(int i = 65; i <= 90; i++) {
 			fos.write(i); // throws IOException
+			
 		}
 		fos.close();
 	}
