@@ -12,10 +12,10 @@ public class FileTest06 {
 		fw.write("abcdefg \n");
 		fw.close();
 		
-		FileReader fr = new FileReader(fi);
-		int ch;
+		FileReader fr = new FileReader(fi); //return을 int로 하기 때문에 -1과 비교하기 위해서 ch를 int형으로 선언
+		int ch; 
 		while( (ch = fr.read()) != -1){
-			System.out.println((char)ch);
+			System.out.println((char)ch); //int형이므로 char로 형변환
 		}
 	}
 }
