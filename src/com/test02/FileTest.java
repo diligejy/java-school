@@ -8,6 +8,10 @@ public class FileTest {
 		//File, FileReader, BufferReader => ReadLine();ㄷㄷ
 		FileReader fr = new FileReader("b.txt");
 		
-		
+		BufferedReader br = new BufferedReader(fr);
+		String str = null;
+		while((str = br.readLine()) != null) {
+			System.out.println(str);
+		}
 	}
 }
