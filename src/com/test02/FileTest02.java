@@ -16,12 +16,24 @@ public class FileTest02 {
 	}
 
 	public static void My_Write(File fi) throws IOException {
-		FileOutputStream fos = new FileOutputStream(fi, true); // throws FileOutputStream
-		for (int i = 65; i <= 90; i++) {
-			fos.write(i); // throws IOException
+		FileOutputStream fos = null;
+		try (fos = new FileOutputStream(fi)) {
+			for (int i = 65; i <= 90; i++) {
+				fos.write(i); // throws IOException
 
+			}
+		}catch(FileNotFoundException f) {
+			
+		}catch(IOException i) {
+			
+		}finally {
+			try {
+				fos.close();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
-		fos.close();
+
 	}
 
 	public static void My_Read(File fi) throws IOException {
