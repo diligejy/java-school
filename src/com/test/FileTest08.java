@@ -17,7 +17,8 @@ public class FileTest08 {
 		int ch = 0;
 		
 		while((ch = bi.read()) != -1) {
-			bfo.write(ch);
+			bfo.write(ch);//BufferedInputStream(byte단위)- 이미지, 음성, 동영상  etc Streaming 가능 한 것들 vs BufferedReader(char단위)- 문자 관리
+			
 		}
 		bfo.close();
 		fo.close();
