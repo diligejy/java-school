@@ -17,6 +17,5 @@ public class FileTest03 {
 
 		File f2 = new File("C:\\MyTest\\야구\\농구"); // 3번 f1.renameTo(f2)
 		f2.renameTo(new File("C:\\MyTest\\야구\\축구"));
-			//경선이 바보 
 	}
 }
